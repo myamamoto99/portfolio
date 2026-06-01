@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { gameStyles } from "@/styles/games";
 import { PuzzleGames } from "@/types/game";
@@ -18,6 +19,7 @@ export default function PuzzleGameCard({
   hook,
   staticPreviewImage,
 }: PuzzleGames) {
+  const { basePath } = useRouter();
   const visualRef = useRef<HTMLDivElement | null>(null);
   const [previewLoaded, setPreviewLoaded] = useState(false);
   const [previewError, setPreviewError] = useState(false);
@@ -29,6 +31,12 @@ export default function PuzzleGameCard({
   const isValidExternalUrl = /^https?:\/\//.test(href);
   const domainLabel = useMemo(() => getDomainLabel(href), [href]);
   const showFallback = !isValidExternalUrl || previewError;
+  const resolvedStaticPreviewImage =
+    staticPreviewImage &&
+    staticPreviewImage.startsWith("/") &&
+    !staticPreviewImage.startsWith(`${basePath}/`)
+      ? `${basePath}${staticPreviewImage}`
+      : staticPreviewImage;
 
   useEffect(() => {
     if (hasStaticPreview || !isValidExternalUrl || shouldLoadPreview) {
@@ -74,9 +82,9 @@ export default function PuzzleGameCard({
       className={gameStyles.card}
     >
       <div ref={visualRef} className={gameStyles.cardVisual}>
-        {staticPreviewImage && (
+        {resolvedStaticPreviewImage && (
           <Image
-            src={staticPreviewImage}
+            src={resolvedStaticPreviewImage}
             alt={`${title} preview`}
             className={gameStyles.cardPreviewImage}
             fill

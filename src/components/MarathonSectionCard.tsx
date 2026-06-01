@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { marathonStyles } from "@/styles/marathons";
 import { MarathonSectionCardProps, MarathonStatLabels } from "@/types/marathon";
@@ -9,13 +10,18 @@ export default function MarathonSectionCard({
   imageUrl,
   stats,
 }: MarathonSectionCardProps) {
+  const { basePath } = useRouter();
+  const resolvedImageUrl = imageUrl.startsWith("/") && !imageUrl.startsWith(`${basePath}/`)
+    ? `${basePath}${imageUrl}`
+    : imageUrl;
+
   return (
     <article
       tabIndex={0}
       className={marathonStyles.sectionContainer}
     >
       <Image
-        src={imageUrl}
+        src={resolvedImageUrl}
         alt={title}
         className={marathonStyles.image}
         fill
