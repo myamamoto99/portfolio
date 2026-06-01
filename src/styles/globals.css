@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --ui-surface-base: #ffffff;
+  --ui-surface-subtle: #f8fafc;
+  --ui-surface-soft: #f1f5f9;
+  --ui-border-soft: #e2e8f0;
+
+  --ui-text-muted: #64748b;
+  --ui-text-strong: #0f172a;
+  --ui-accent: #0369a1;
+  --ui-focus-ring: rgba(14, 165, 233, 0.7);
+  --ui-shadow-elevated: rgba(15, 23, 42, 0.45);
+  --ui-shadow-accent: rgba(2, 132, 199, 0.55);
+  --ui-header-bg: #f8fafc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --ui-surface-base: #0f172a;
+    --ui-surface-subtle: #0b1220;
+    --ui-surface-soft: #1e293b;
+    --ui-border-soft: #334155;
+
+    --ui-text-muted: #cbd5e1;
+    --ui-text-strong: #f8fafc;
+    --ui-accent: #7dd3fc;
+    --ui-focus-ring: rgba(56, 189, 248, 0.7);
+    --ui-shadow-elevated: rgba(2, 6, 23, 0.9);
+    --ui-shadow-accent: rgba(56, 189, 248, 0.45);
+    --ui-header-bg: #0b1220;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  color-scheme: light dark;
+  font-family: var(--font-body), "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.ui-page {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  padding: 2.5rem 1rem;
+  background: var(--background);
+}
+
+.ui-content-surface {
+  min-height: 100%;
+  background: radial-gradient(
+      1200px 600px at 5% -15%,
+      color-mix(in oklab, var(--ui-accent) 15%, transparent),
+      transparent 65%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--ui-surface-subtle),
+      var(--background) 32%,
+      var(--background)
+    );
+}
+
+.ui-sticky-header {
+  background-color: var(--ui-header-bg);
+  border-bottom: 1px solid var(--ui-border-soft);
+  box-shadow: 0 10px 24px -26px var(--ui-shadow-elevated);
+}
+
+.ui-card {
+  border: 1px solid var(--ui-border-soft);
+  border-radius: 1rem;
+  background: var(--ui-surface-base);
+  box-shadow: 0 16px 40px -28px var(--ui-shadow-elevated);
+}
+
+.ui-title {
+  margin: 0 0 0.5rem;
+  color: var(--ui-text-strong);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  line-height: 1.22;
+  overflow: visible;
+}
+
+.ui-title-cool {
+  display: inline-block;
+  letter-spacing: -0.02em;
+  overflow: visible;
+}
+
+.ui-title-main {
+  font-family: var(--font-title), "Avenir Next", "Segoe UI", sans-serif;
+  color: transparent;
+  background-image: linear-gradient(
+    100deg,
+    #38bdf8 0%,
+    #0ea5e9 35%,
+    #0284c7 65%,
+    #0369a1 100%
+  );
+  background-size: 200% 200%;
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: clamp(1.7rem, 4.25vw, 2.45rem);
+  line-height: 1.2;
+  padding-bottom: 0.12em;
+  text-wrap: balance;
+  text-shadow: none;
+  animation: ui-title-shift 8s ease-in-out infinite;
+}
+
+@keyframes ui-title-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.ui-button {
+  border: 1px solid transparent;
+  border-radius: 0.65rem;
+  padding: 0.55rem 0.95rem;
+  background: var(--ui-accent);
+  color: var(--ui-surface-base);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+  box-shadow: 0 10px 20px -14px var(--ui-shadow-accent);
+}
+
+.ui-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.ui-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ui-surface-base), 0 0 0 4px var(--ui-focus-ring);
+}
+
+.ui-button-secondary {
+  border-color: var(--ui-border-soft);
+  background: var(--ui-surface-soft);
+  color: var(--ui-text-strong);
+  box-shadow: none;
+}
+
+.ui-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
