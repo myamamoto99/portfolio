@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
+const nextConfig = {
+  output: 'export',
+  basePath: '/portfolio',
+  images: {
+    unoptimized: true, // required for static export
+  },
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+export default nextConfig
