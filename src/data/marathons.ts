@@ -1,9 +1,9 @@
-import { MarathonSectionCardProps } from "@/types/marathon";
+import { MarathonSection } from "@/types/marathon";
 
-const marathonSections: MarathonSectionCardProps[] = [
+const marathonSections: MarathonSection[] = [
   {
     title: "Sydney Marathon",
-    raceDate: "Sunday, August 30, 2026",
+    raceDate: "August 30, 2026",
     imageUrl: "/images/marathons/sydney-marathon.jpg",
     stats: {
       bibNumber: "TBD",
@@ -14,7 +14,7 @@ const marathonSections: MarathonSectionCardProps[] = [
   },
   {
     title: "New York City Marathon",
-    raceDate: "Sunday, November 2, 2025",
+    raceDate: "November 2, 2025",
     imageUrl: "/images/marathons/nyc-marathon.png",
     stats: {
       bibNumber: "40706",
@@ -25,7 +25,7 @@ const marathonSections: MarathonSectionCardProps[] = [
   },
   {
     title: "Tokyo Marathon",
-    raceDate: "Sunday, March 2, 2025",
+    raceDate: "March 2, 2025",
     imageUrl: "/images/marathons/tokyo-marathon.jpg",
     stats: {
       bibNumber: "16529",
@@ -36,7 +36,7 @@ const marathonSections: MarathonSectionCardProps[] = [
   },
   {
     title: "Okayama Marathon",
-    raceDate: "Sunday, November 9, 2024",
+    raceDate: "November 9, 2024",
     imageUrl: "/images/marathons/okayama-marathon.png",
     stats: {
       bibNumber: "D51044",
@@ -47,7 +47,7 @@ const marathonSections: MarathonSectionCardProps[] = [
   },
   {
     title: "Detroit Marathon",
-    raceDate: "Sunday, October 20, 2024",
+    raceDate: "October 20, 2024",
     imageUrl: "/images/marathons/detroit-marathon.png",
     stats: {
       bibNumber: "800",
@@ -58,7 +58,7 @@ const marathonSections: MarathonSectionCardProps[] = [
   },
   {
     title: "Paris Marathon",
-    raceDate: "Sunday, April 2, 2023",
+    raceDate: "April 2, 2023",
     imageUrl: "/images/marathons/paris-marathon.webp",
     stats: {
       bibNumber: "46408",

@@ -3,15 +3,18 @@ import { useRouter } from "next/router";
 import { marathonStyles, gridStyles } from "@/styles";
 import { MarathonSectionCardProps, MarathonStatLabels } from "@/types/marathon";
 import { resolveBasePathImage } from "@/utils/imagePath";
+import Badge from "./badge";
 
 export default function MarathonSectionCard({
   title,
   raceDate,
   imageUrl,
   stats,
+  isPR,
 }: MarathonSectionCardProps) {
   const { basePath } = useRouter();
   const resolvedImageUrl = resolveBasePathImage(basePath, imageUrl)!;
+  const isUpcoming = new Date(raceDate) > new Date();
 
   return (
     <article
@@ -27,6 +30,13 @@ export default function MarathonSectionCard({
       />
 
       <div className={gridStyles.overlay} />
+
+      {(isUpcoming || isPR) && (
+        <div className={marathonStyles.badgeRow}>
+          {isUpcoming && <Badge text="Upcoming" color="bg-orange-500/85 text-white" />}
+          {isPR && <Badge text="PR" color="bg-green-500/85 text-white" />}
+        </div>
+      )}
 
       <div className={gridStyles.bottomInfo}>
         <h3 className={gridStyles.title}>{title}</h3>

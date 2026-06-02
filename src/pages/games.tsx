@@ -1,4 +1,4 @@
-import PuzzleGameCard from "@/components/PuzzleGameCard";
+import PuzzleGameCard from "@/components/puzzleGameCard";
 import { puzzleGames } from "@/data/games";
 import { gameStyles } from "@/styles/games";
 

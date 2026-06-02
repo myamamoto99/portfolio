@@ -1,8 +1,11 @@
-import MarathonSectionCard from "@/components/MarathonSectionCard";
+import MarathonSectionCard from "@/components/marathonSectionCard";
 import { marathonSections } from "@/data/marathons";
 import { gridStyles } from "@/styles";
 
 export default function MarathonsPage() {
+  const pr = marathonSections.reduce((fastest, marathon) => {
+    return marathon.stats.finishTime !== "TBD" &&marathon.stats.finishTime < fastest.stats.finishTime ? marathon : fastest;
+  });
   return (
     <section className={gridStyles.grid}>
       {marathonSections.map((section) => (
@@ -12,6 +15,7 @@ export default function MarathonsPage() {
           raceDate={section.raceDate}
           imageUrl={section.imageUrl}
           stats={section.stats}
+          isPR={pr.title === section.title}
         />
       ))}
     </section>
