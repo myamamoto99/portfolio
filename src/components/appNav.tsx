@@ -9,6 +9,7 @@ const navItems = [
   { label: "Home", href: "/home" },
   { label: "Marathons", href: "/marathons" },
   { label: "Games", href: "/games" },
+  { label: "Baking", href: "/baking" },
 ] as const;
 
 export default function AppNav() {

@@ -1,10 +1,10 @@
 import MarathonSectionCard from "@/components/MarathonSectionCard";
 import { marathonSections } from "@/data/marathons";
-import { marathonStyles } from "@/styles/marathons";
+import { gridStyles } from "@/styles";
 
 export default function MarathonsPage() {
   return (
-    <section className={marathonStyles.grid}>
+    <section className={gridStyles.grid}>
       {marathonSections.map((section) => (
         <MarathonSectionCard
           key={section.title}

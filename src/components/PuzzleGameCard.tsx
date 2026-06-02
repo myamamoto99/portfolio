@@ -3,7 +3,9 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { gameStyles } from "@/styles/games";
+import { gridStyles } from "@/styles/grid";
 import { PuzzleGames } from "@/types/game";
+import { resolveBasePathImage } from "@/utils/imagePath";
 
 const getDomainLabel = (href: string) => {
   try {
@@ -31,12 +33,7 @@ export default function PuzzleGameCard({
   const isValidExternalUrl = /^https?:\/\//.test(href);
   const domainLabel = useMemo(() => getDomainLabel(href), [href]);
   const showFallback = !isValidExternalUrl || previewError;
-  const resolvedStaticPreviewImage =
-    staticPreviewImage &&
-    staticPreviewImage.startsWith("/") &&
-    !staticPreviewImage.startsWith(`${basePath}/`)
-      ? `${basePath}${staticPreviewImage}`
-      : staticPreviewImage;
+  const resolvedStaticPreviewImage = resolveBasePathImage(basePath, staticPreviewImage);
 
   useEffect(() => {
     if (hasStaticPreview || !isValidExternalUrl || shouldLoadPreview) {
@@ -86,7 +83,7 @@ export default function PuzzleGameCard({
           <Image
             src={resolvedStaticPreviewImage}
             alt={`${title} preview`}
-            className={gameStyles.cardPreviewImage}
+            className={gridStyles.imageFillBase}
             fill
             sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
           />
@@ -113,14 +110,14 @@ export default function PuzzleGameCard({
 
         {showFallback && !hasStaticPreview && (
           <div className={gameStyles.cardPreviewFallback}>
-            <span className="text-xs font-medium">Open to preview</span>
+            <span className={gameStyles.cardPreviewFallbackText}>Open to preview</span>
           </div>
         )}
 
         <span className={gameStyles.cardPreviewDomain}>{domainLabel}</span>
       </div>
 
-      <div className="flex items-start justify-between gap-3">
+      <div className={gameStyles.cardHeaderRow}>
         <h3 className={gameStyles.cardTitle}>{title}</h3>
       </div>
 

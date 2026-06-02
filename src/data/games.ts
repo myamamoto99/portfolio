@@ -20,13 +20,13 @@ const puzzleGames: PuzzleGames[] = [
     title: "FoodGuessr",
     href: "https://foodguessr.com",
     hook: "Guess where dishes are from based on their appearance and ingredients.",
-    staticPreviewImage: "/images/foodguessr.png",
+    staticPreviewImage: "/images/games/foodguessr.png",
   },
   {
     title: "Timeguessr",
     href: "https://timeguessr.com",
     hook: "Guess the year taken and location of pictures.",
-    staticPreviewImage: "/images/timeguessr.png",
+    staticPreviewImage: "/images/games/timeguessr.png",
   },
   {
     title: "Betweenle",
@@ -62,7 +62,7 @@ const puzzleGames: PuzzleGames[] = [
     title: "NYTimes Crosswords",
     href: "https://www.nytimes.com/crosswords",
     hook: "Solve the daily crossword puzzles from The New York Times.",
-    staticPreviewImage: "/images/nytimes-crossword.png",
+    staticPreviewImage: "/images/games/nytimes-crossword.png",
   }
 ];
 export { puzzleGames };

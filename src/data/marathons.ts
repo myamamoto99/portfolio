@@ -4,7 +4,7 @@ const marathonSections: MarathonSectionCardProps[] = [
   {
     title: "Sydney Marathon",
     raceDate: "Sunday, August 30, 2026",
-    imageUrl: "/images/sydney-marathon.jpg",
+    imageUrl: "/images/marathons/sydney-marathon.jpg",
     stats: {
       bibNumber: "TBD",
       finishTime: "TBD",
@@ -15,7 +15,7 @@ const marathonSections: MarathonSectionCardProps[] = [
   {
     title: "New York City Marathon",
     raceDate: "Sunday, November 2, 2025",
-    imageUrl: "/images/nyc-marathon.png",
+    imageUrl: "/images/marathons/nyc-marathon.png",
     stats: {
       bibNumber: "40706",
       finishTime: "04:52:58",
@@ -26,7 +26,7 @@ const marathonSections: MarathonSectionCardProps[] = [
   {
     title: "Tokyo Marathon",
     raceDate: "Sunday, March 2, 2025",
-    imageUrl: "/images/tokyo-marathon.jpg",
+    imageUrl: "/images/marathons/tokyo-marathon.jpg",
     stats: {
       bibNumber: "16529",
       finishTime: "04:27:47",
@@ -37,7 +37,7 @@ const marathonSections: MarathonSectionCardProps[] = [
   {
     title: "Okayama Marathon",
     raceDate: "Sunday, November 9, 2024",
-    imageUrl: "/images/okayama-marathon.png",
+    imageUrl: "/images/marathons/okayama-marathon.png",
     stats: {
       bibNumber: "D51044",
       finishTime: "05:55:15",
@@ -48,7 +48,7 @@ const marathonSections: MarathonSectionCardProps[] = [
   {
     title: "Detroit Marathon",
     raceDate: "Sunday, October 20, 2024",
-    imageUrl: "/images/detroit-marathon.png",
+    imageUrl: "/images/marathons/detroit-marathon.png",
     stats: {
       bibNumber: "800",
       finishTime: "04:13:48",
@@ -59,7 +59,7 @@ const marathonSections: MarathonSectionCardProps[] = [
   {
     title: "Paris Marathon",
     raceDate: "Sunday, April 2, 2023",
-    imageUrl: "/images/paris-marathon.webp",
+    imageUrl: "/images/marathons/paris-marathon.webp",
     stats: {
       bibNumber: "46408",
       finishTime: "04:59:13",

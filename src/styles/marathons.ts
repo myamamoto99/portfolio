@@ -1,7 +1,8 @@
 const marathonStyles = {
-  grid: "grid h-full auto-rows-[280px] content-start gap-px pt-0 md:grid-cols-2 md:auto-rows-[340px]",
-  image: "absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] group-focus-within:scale-[1.03]",
-  sectionContainer: "group relative h-full overflow-hidden border border-[var(--ui-border-soft)]/70 bg-[var(--ui-surface-base)] outline-none focus-visible:ring-2 focus-visible:ring-[var(--ui-focus-ring)]",
+  statsPanel:
+    "absolute inset-x-0 bottom-0 z-20 translate-y-full border-t border-white/20 bg-slate-950/84 p-4 text-white backdrop-blur-sm transition-transform duration-300 group-hover:translate-y-0 group-focus-within:translate-y-0",
+  statsTitle: "text-xs font-semibold uppercase tracking-[0.14em] text-slate-200",
+  statsGrid: "mt-2 grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs md:text-sm",
   statName: "text-slate-300",
   statData: "text-right font-medium",
 } as const;

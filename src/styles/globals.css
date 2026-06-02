@@ -77,13 +77,6 @@ body {
   box-shadow: 0 10px 24px -26px var(--ui-shadow-elevated);
 }
 
-.ui-card {
-  border: 1px solid var(--ui-border-soft);
-  border-radius: 1rem;
-  background: var(--ui-surface-base);
-  box-shadow: 0 16px 40px -28px var(--ui-shadow-elevated);
-}
-
 .ui-title {
   margin: 0 0 0.5rem;
   color: var(--ui-text-strong);
@@ -134,41 +127,4 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.ui-button {
-  border: 1px solid transparent;
-  border-radius: 0.65rem;
-  padding: 0.55rem 0.95rem;
-  background: var(--ui-accent);
-  color: var(--ui-surface-base);
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1;
-  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
-  box-shadow: 0 10px 20px -14px var(--ui-shadow-accent);
-}
-
-.ui-button:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.03);
-}
-
-.ui-button:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--ui-surface-base), 0 0 0 4px var(--ui-focus-ring);
-}
-
-.ui-button-secondary {
-  border-color: var(--ui-border-soft);
-  background: var(--ui-surface-soft);
-  color: var(--ui-text-strong);
-  box-shadow: none;
-}
-
-.ui-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  align-items: center;
 }
