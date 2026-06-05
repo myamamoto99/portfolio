@@ -1,10 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
-
-import { gameStyles } from "@/styles/games";
-import { gridStyles } from "@/styles/grid";
-import { PuzzleGames } from "@/types/game";
+import { gameStyles, gridStyles } from "@/styles";
+import { PuzzleGames } from "@/types";
 import { resolveBasePathImage } from "@/utils/imagePath";
 
 const getDomainLabel = (href: string) => {

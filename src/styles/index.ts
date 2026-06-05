@@ -6,3 +6,4 @@ export * from "./nav";
 export * from "./ui";
 export * from "./home";
 export * from "./baking";
+export * from "./controls";

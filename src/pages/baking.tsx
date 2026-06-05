@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { gridStyles } from "@/styles";
 import { bakingItems } from "@/data/baking";
 import BakingCard from "@/components/bakingCard";
-import { Baking } from "@/types/baking";
+import { Baking } from "@/types";
 import { resolveBasePathImage } from "@/utils/imagePath";
 import BakingImage from "@/components/bakingImage";
 

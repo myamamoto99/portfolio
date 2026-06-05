@@ -1,4 +1,4 @@
-import { Baking } from "@/types/baking";
+import { Baking } from "@/types";
 
 const bakingItems: Baking[] = [
   {

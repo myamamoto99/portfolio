@@ -1,5 +1,5 @@
 import { bakingStyles } from "@/styles";
-import { BakingImageProps } from "@/types/baking";
+import { BakingImageProps } from "@/types";
 import ZoomButton from "@/components/zoomButton";
 import Image from "next/image";
 import { FiX } from "react-icons/fi";

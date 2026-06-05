@@ -1,4 +1,4 @@
-import { MarathonSection } from "@/types/marathon";
+import { MarathonSection } from "@/types";
 
 const marathonSections: MarathonSection[] = [
   {

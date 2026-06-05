@@ -1,4 +1,4 @@
-import { PuzzleGames } from "@/types/game";
+import { PuzzleGames } from "@/types";
 
 const puzzleGames: PuzzleGames[] = [
   {

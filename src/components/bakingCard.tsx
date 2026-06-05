@@ -1,4 +1,4 @@
-import { BakingCardProps } from "@/types/baking";
+import { BakingCardProps } from "@/types";
 import { resolveBasePathImage } from "@/utils/imagePath";
 import Image from "next/image";
 import { bakingStyles, gridStyles } from "@/styles";

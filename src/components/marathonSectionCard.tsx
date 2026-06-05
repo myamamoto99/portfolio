@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { marathonStyles, gridStyles } from "@/styles";
-import { MarathonSectionCardProps, MarathonStatLabels } from "@/types/marathon";
+import { MarathonSectionCardProps, MarathonStatLabels } from "@/types";
 import { resolveBasePathImage } from "@/utils/imagePath";
 import Badge from "./badge";
 
