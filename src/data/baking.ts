@@ -42,11 +42,6 @@ const bakingItems: Baking[] = [
         imageUrl: "/images/baking/halloween-cookies.jpeg",
     },
     {
-        title: "Thanksgiving Sugar Cookies",
-        date: "July 15, 2021",
-        imageUrl: "/images/baking/thanksgiving-cookies.jpeg",
-    },
-    {
         title: "KPOP Birthday Cake",
         date: "April 15, 2022",
         imageUrl: "/images/baking/k-pop-cake.jpeg",
@@ -64,13 +59,13 @@ const bakingItems: Baking[] = [
     {
         title: "Winter Wonderland Cake",
         date: "January 22, 2021",
-        imageUrl: "/images/baking/winter-cake.jpg",
+        imageUrl: "/images/baking/winter-cake.JPG",
     },
-  {
-    title: "921 Oak Cake",
-    date: "October 9, 2020",
-    imageUrl: "/images/baking/921-oak-cake.jpg",
-  },
+    {
+        title: "921 Oak Cake",
+        date: "October 9, 2020",
+        imageUrl: "/images/baking/921-oak-cake.JPG",
+    },
 ];
 
 export { bakingItems };
