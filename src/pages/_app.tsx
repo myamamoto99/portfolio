@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import AppNav from "@/components/appNav";
 
-import StoreProvider from "@/store/StoreProvider";
+import { StoreProvider } from "@/store";
 import { appShellStyles } from "@/styles/appShell";
 import "@/styles/globals.css";
 
