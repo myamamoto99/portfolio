@@ -63,6 +63,6 @@ const puzzleGames: PuzzleGames[] = [
     href: "https://www.nytimes.com/crosswords",
     hook: "Solve the daily crossword puzzles from The New York Times.",
     staticPreviewImage: "/images/games/nytimes-crossword.png",
-  }
+  },
 ];
 export { puzzleGames };

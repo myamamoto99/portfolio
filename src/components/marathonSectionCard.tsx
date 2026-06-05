@@ -17,10 +17,7 @@ export default function MarathonSectionCard({
   const isUpcoming = new Date(raceDate) > new Date();
 
   return (
-    <article
-      tabIndex={0}
-      className={gridStyles.sectionContainer}
-    >
+    <article tabIndex={0} className={gridStyles.sectionContainer}>
       <Image
         src={resolvedImageUrl}
         alt={title}

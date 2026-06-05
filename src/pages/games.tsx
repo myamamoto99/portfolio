@@ -3,7 +3,6 @@ import { puzzleGames } from "@/data/games";
 import { gameStyles } from "@/styles/games";
 
 export default function GamesPage() {
-
   return (
     <section className={gameStyles.pageSection}>
       <div className={gameStyles.grid}>

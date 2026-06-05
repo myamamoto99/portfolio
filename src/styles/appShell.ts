@@ -6,7 +6,8 @@ const appShellStyles = {
   titleWrap: "min-w-0 flex-1",
   title: "ui-title ui-title-cool mb-0",
   navWrap: "shrink-0 mr-3 md:mr-4",
-  contentSurface: "ui-content-surface w-full min-h-[calc(100vh-5.5rem)] md:min-h-[calc(100vh-6rem)]",
+  contentSurface:
+    "ui-content-surface w-full min-h-[calc(100vh-5.5rem)] md:min-h-[calc(100vh-6rem)]",
   contentInner: "w-full px-3 pt-4 md:px-4 md:pt-6",
 } as const;
 

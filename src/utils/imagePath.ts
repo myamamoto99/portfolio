@@ -1,4 +1,4 @@
-export const resolveBasePathImage = (basePath: string, imagePath?: string,) => {
+export const resolveBasePathImage = (basePath: string, imagePath?: string) => {
   if (!imagePath) {
     return undefined;
   }

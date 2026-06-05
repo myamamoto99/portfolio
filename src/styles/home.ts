@@ -12,8 +12,7 @@ const homeStyles = {
   list: `mt-4 space-y-3 ${uiStyles.mutedTextSm} leading-6`,
   listItem: uiStyles.subtleItem,
   skillsWrap: `mt-4 space-y-4 ${uiStyles.mutedTextSm} leading-6`,
-  skillLabel:
-    "text-xs font-semibold uppercase tracking-wide text-[var(--ui-text-strong)]",
+  skillLabel: "text-xs font-semibold uppercase tracking-wide text-[var(--ui-text-strong)]",
   skillValue: "mt-1",
 } as const;
 

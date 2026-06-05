@@ -4,17 +4,19 @@ const gameStyles = {
   pageSection: "pb-8 pt-2",
   headerWrap: "mb-5 flex flex-wrap items-end justify-between gap-3",
   filterWrap: "flex flex-wrap gap-2",
-  filterButtonBase: "rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide transition-colors md:text-sm",
+  filterButtonBase:
+    "rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide transition-colors md:text-sm",
   filterButtonActive: "bg-[var(--ui-accent)] text-white",
   filterButtonInactive:
     "border border-[var(--ui-border-soft)] bg-[var(--ui-surface-base)] text-[var(--ui-text-muted)] hover:text-[var(--ui-text-strong)]",
   grid: "grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3",
-  card:
-    `group ${uiStyles.panelBase} p-4 shadow-[0_16px_40px_-30px_var(--ui-shadow-elevated)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--ui-accent)]/45 hover:shadow-[0_20px_44px_-28px_var(--ui-shadow-elevated)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ui-focus-ring)]`,
+  card: `group ${uiStyles.panelBase} p-4 shadow-[0_16px_40px_-30px_var(--ui-shadow-elevated)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--ui-accent)]/45 hover:shadow-[0_20px_44px_-28px_var(--ui-shadow-elevated)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ui-focus-ring)]`,
   cardVisual:
     "relative mb-3 h-80 overflow-hidden rounded-xl border border-[var(--ui-border-soft)]/60 bg-[linear-gradient(135deg,color-mix(in_oklab,var(--ui-accent)_20%,transparent),var(--ui-surface-soft))]",
-  cardPreviewFrame: "absolute inset-0 h-full w-full origin-top-left scale-100 border-0 pointer-events-none",
-  cardPreviewLoading: "absolute inset-0 animate-pulse bg-[linear-gradient(135deg,color-mix(in_oklab,var(--ui-accent)_24%,transparent),var(--ui-surface-soft))]",
+  cardPreviewFrame:
+    "absolute inset-0 h-full w-full origin-top-left scale-100 border-0 pointer-events-none",
+  cardPreviewLoading:
+    "absolute inset-0 animate-pulse bg-[linear-gradient(135deg,color-mix(in_oklab,var(--ui-accent)_24%,transparent),var(--ui-surface-soft))]",
   cardPreviewFallback:
     "absolute inset-0 flex items-center justify-center bg-[linear-gradient(145deg,color-mix(in_oklab,var(--ui-accent)_14%,transparent),var(--ui-surface-soft))] text-[var(--ui-text-muted)]",
   cardPreviewFallbackText: "text-xs font-medium",

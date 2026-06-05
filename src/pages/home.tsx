@@ -18,7 +18,8 @@ export default function HomePage() {
     },
     {
       label: "Frameworks & Tools",
-      value: "Vue.js, Node.js, Vuex, Pinia, XState, REST APIs, Git, GitHub Actions, CI/CD pipelines",
+      value:
+        "Vue.js, Node.js, Vuex, Pinia, XState, REST APIs, Git, GitHub Actions, CI/CD pipelines",
     },
     {
       label: "Concepts",
@@ -34,17 +35,16 @@ export default function HomePage() {
           <h3 className={homeStyles.sectionTitle}>About Me</h3>
 
           <p className={`mt-5 ${homeStyles.bodyText}`}>
-            I&apos;m Mirei (but everyone calls me Mimi) - an Engineering Manager and
-            frontend engineer based in Brooklyn, NY. I spend my days leading a team
-            of engineers at FactSet, where I architect large-scale Vue/TypeScript
-            applications and bridge the gap between engineering, product, and design.
+            I&apos;m Mirei (but everyone calls me Mimi) - an Engineering Manager and frontend
+            engineer based in Brooklyn, NY. I spend my days leading a team of engineers at FactSet,
+            where I architect large-scale Vue/TypeScript applications and bridge the gap between
+            engineering, product, and design.
           </p>
           <p className={`mt-4 ${homeStyles.bodyText}`}>
-            Outside of work, I run marathons, hike, read constantly, and never turn
-            down a good game - puzzles, board games, video games, spikeball,
-            whatever&apos;s on the table. I also cross-stitch and bake, which helps me
-            stay balanced. This site is my playground for learning React, Next.js,
-            and Redux.
+            Outside of work, I run marathons, hike, read constantly, and never turn down a good game
+            - puzzles, board games, video games, spikeball, whatever&apos;s on the table. I also
+            cross-stitch and bake, which helps me stay balanced. This site is my playground for
+            learning React, Next.js, and Redux.
           </p>
         </div>
       </div>

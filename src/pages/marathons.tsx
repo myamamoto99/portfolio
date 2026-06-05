@@ -4,7 +4,10 @@ import { gridStyles } from "@/styles";
 
 export default function MarathonsPage() {
   const pr = marathonSections.reduce((fastest, marathon) => {
-    return marathon.stats.finishTime !== "TBD" &&marathon.stats.finishTime < fastest.stats.finishTime ? marathon : fastest;
+    return marathon.stats.finishTime !== "TBD" &&
+      marathon.stats.finishTime < fastest.stats.finishTime
+      ? marathon
+      : fastest;
   });
   return (
     <section className={gridStyles.grid}>

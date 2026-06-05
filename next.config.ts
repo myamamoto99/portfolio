@@ -1,9 +1,9 @@
 const nextConfig = {
-  output: 'export',
-  basePath: '/portfolio',
+  output: "export",
+  basePath: "/portfolio",
   images: {
     unoptimized: true, // required for static export
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

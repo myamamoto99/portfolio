@@ -6,16 +6,16 @@ import { useRouter } from "next/router";
 import { FiMaximize } from "react-icons/fi";
 
 export default function BakingCard({ title, imageUrl, onOpen }: BakingCardProps) {
-    const {basePath} = useRouter();
-    const resolvedImageUrl = resolveBasePathImage(basePath, imageUrl)!;
+  const { basePath } = useRouter();
+  const resolvedImageUrl = resolveBasePathImage(basePath, imageUrl)!;
 
-    return (
-      <button
-        type="button"
-        className={bakingStyles.cardButton}
-        onClick={onOpen}
-        aria-label={`Open full-size image for ${title}`}
-      >
+  return (
+    <button
+      type="button"
+      className={bakingStyles.cardButton}
+      onClick={onOpen}
+      aria-label={`Open full-size image for ${title}`}
+    >
       <Image
         src={resolvedImageUrl}
         alt={title}
@@ -30,5 +30,5 @@ export default function BakingCard({ title, imageUrl, onOpen }: BakingCardProps)
         <FiMaximize className="h-4 w-4" />
       </span>
     </button>
-    )
+  );
 }

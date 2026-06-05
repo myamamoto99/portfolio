@@ -15,12 +15,7 @@ const getDomainLabel = (href: string) => {
   }
 };
 
-export default function PuzzleGameCard({
-  href,
-  title,
-  hook,
-  staticPreviewImage,
-}: PuzzleGames) {
+export default function PuzzleGameCard({ href, title, hook, staticPreviewImage }: PuzzleGames) {
   const { basePath } = useRouter();
   const visualRef = useRef<HTMLDivElement | null>(null);
   const [previewLoaded, setPreviewLoaded] = useState(false);
@@ -66,18 +61,10 @@ export default function PuzzleGameCard({
   }, [hasStaticPreview, isValidExternalUrl, shouldLoadPreview]);
 
   const canRenderIframe =
-    !hasStaticPreview &&
-    !showFallback &&
-    isValidExternalUrl &&
-    shouldLoadPreview;
+    !hasStaticPreview && !showFallback && isValidExternalUrl && shouldLoadPreview;
 
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className={gameStyles.card}
-    >
+    <a href={href} target="_blank" rel="noreferrer" className={gameStyles.card}>
       <div ref={visualRef} className={gameStyles.cardVisual}>
         {resolvedStaticPreviewImage && (
           <Image
@@ -104,9 +91,7 @@ export default function PuzzleGameCard({
           />
         )}
 
-        {canRenderIframe && !previewLoaded && (
-          <div className={gameStyles.cardPreviewLoading} />
-        )}
+        {canRenderIframe && !previewLoaded && <div className={gameStyles.cardPreviewLoading} />}
 
         {showFallback && !hasStaticPreview && (
           <div className={gameStyles.cardPreviewFallback}>

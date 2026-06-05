@@ -7,9 +7,7 @@ const navStyles = {
 } as const;
 
 const getNavItemClassName = (isActive: boolean) => {
-  return `${navStyles.itemBase} ${
-    isActive ? navStyles.itemActive : navStyles.itemInactive
-  }`;
+  return `${navStyles.itemBase} ${isActive ? navStyles.itemActive : navStyles.itemInactive}`;
 };
 
 export { navStyles, getNavItemClassName };
