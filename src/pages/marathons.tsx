@@ -19,12 +19,13 @@ export default function MarathonsPage() {
             : section.stats.finishTime === "TBD"
         );
 
-  const pr = filteredMarathons.reduce((fastest, marathon) => {
-    return marathon.stats.finishTime !== "TBD" &&
-      marathon.stats.finishTime < fastest.stats?.finishTime
-      ? marathon
-      : fastest;
-  }, {} as MarathonSection);
+  const pr = filteredMarathons
+    .filter((marathon) => marathon.stats.finishTime !== "TBD")
+    .reduce<MarathonSection | null>(
+      (fastest, marathon) =>
+        !fastest || marathon.stats.finishTime < fastest.stats.finishTime ? marathon : fastest,
+      null
+    );
   const controlOptions = [
     { id: "all", label: "All" },
     { id: "completed", label: "Completed" },
@@ -46,7 +47,7 @@ export default function MarathonsPage() {
             raceDate={section.raceDate}
             imageUrl={section.imageUrl}
             stats={section.stats}
-            isPR={pr.title === section.title}
+            isPR={pr?.title === section.title}
           />
         ))}
       </section>
