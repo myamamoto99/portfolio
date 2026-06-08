@@ -5,6 +5,7 @@ export default function HomePage() {
     "My React project and UI experiments.",
     "A running log of my completed marathons and race highlights.",
     "A curated list of online puzzle games I keep coming back to.",
+    "A baking tab with photos of my favorite creations.",
   ];
 
   const skillSections = [
@@ -98,7 +99,10 @@ export default function HomePage() {
           <h3 className={homeStyles.sectionTitle}>Experience</h3>
           <div className={homeStyles.resumeWrap}>
             {experienceItems.map((item) => (
-              <article key={`${item.company}-${item.role}-${item.period}`} className={homeStyles.resumeItem}>
+              <article
+                key={`${item.company}-${item.role}-${item.period}`}
+                className={homeStyles.resumeItem}
+              >
                 <p className={homeStyles.resumeHeader}>
                   {item.role} <span className={homeStyles.resumeSubtle}>at {item.company}</span>
                 </p>
@@ -144,7 +148,10 @@ export default function HomePage() {
           <h3 className={homeStyles.sectionTitle}>Education</h3>
           <div className={homeStyles.resumeWrap}>
             {educationItems.map((item) => (
-              <article key={`${item.school}-${item.degree}-${item.location}`} className={homeStyles.resumeItem}>
+              <article
+                key={`${item.school}-${item.degree}-${item.location}`}
+                className={homeStyles.resumeItem}
+              >
                 <p className={homeStyles.resumeHeader}>{item.school}</p>
                 <p className={homeStyles.resumeMeta}>{item.degree}</p>
                 <p className={homeStyles.resumeMeta}>{item.location}</p>
