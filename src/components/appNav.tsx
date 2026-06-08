@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { getMobileNavItemClassName, getNavItemClassName, navStyles } from "@/styles/nav";
+import { getNavItemClassName, navStyles } from "@/styles/nav";
 import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Menu from "./menu";
+import { useRouter } from "next/router";
 
 const navItems = [
   { label: "Home", href: "/home" },
@@ -12,8 +14,10 @@ const navItems = [
 ] as const;
 
 export default function AppNav() {
+  const router = useRouter();
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const selectedNavItem = navItems.find((item) => item.href === pathname);
   const navRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -36,6 +40,11 @@ export default function AppNav() {
       document.removeEventListener("touchstart", handlePointerDownOutside);
     };
   }, [isMenuOpen]);
+
+  function onMenuItemSelected(selectedLabel: string, isOpen: boolean) {
+    setIsMenuOpen(isOpen);
+    router.push(navItems.find((item) => item.label === selectedLabel)?.href || "/home");
+  }
 
   return (
     <nav ref={navRef} className={navStyles.container} aria-label="Content sections">
@@ -63,22 +72,11 @@ export default function AppNav() {
       </button>
 
       {isMenuOpen && (
-        <div id="content-mobile-nav" className={navStyles.mobileMenu}>
-          {navItems.map((item) => {
-            const isActive = pathname === item.href;
-
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={getMobileNavItemClassName(isActive)}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </div>
+        <Menu
+          navItems={navItems.map((item) => item.label)}
+          activeItem={selectedNavItem?.label ?? ""}
+          onMenuItemSelected={onMenuItemSelected}
+        />
       )}
     </nav>
   );

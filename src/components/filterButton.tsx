@@ -1,7 +1,7 @@
 import { controlsStyles } from "@/styles";
-import { ControlButtonProps } from "@/types";
+import { FilterButtonProps } from "@/types";
 
-export default function ControlButton({ option, isActive, onClick }: ControlButtonProps) {
+export default function FilterButton({ option, isActive, onClick }: FilterButtonProps) {
   return (
     <button
       type="button"
@@ -11,7 +11,6 @@ export default function ControlButton({ option, isActive, onClick }: ControlButt
         isActive ? controlsStyles.buttonActive : controlsStyles.buttonInactive
       }`}
     >
-      {option.icon && <span className={controlsStyles.icon}>{option.icon}</span>}
       <span>{option.label}</span>
     </button>
   );
