@@ -2,6 +2,28 @@ import { MarathonSection } from "@/types";
 
 const marathonSections: MarathonSection[] = [
   {
+    title: "Cape Town Marathon",
+    raceDate: "May 23, 2027",
+    imageUrl: "/images/marathons/cape-town-marathon.png",
+    stats: {
+      bibNumber: "TBD",
+      finishTime: "TBD",
+      averagePace: "TBD",
+      overallStanding: "TBD",
+    },
+  },
+  {
+    title: "London Marathon",
+    raceDate: "April 24, 2027",
+    imageUrl: "/images/marathons/london-marathon.png",
+    stats: {
+      bibNumber: "TBD",
+      finishTime: "TBD",
+      averagePace: "TBD",
+      overallStanding: "TBD",
+    },
+  },
+  {
     title: "Sydney Marathon",
     raceDate: "August 30, 2026",
     imageUrl: "/images/marathons/sydney-marathon.jpg",

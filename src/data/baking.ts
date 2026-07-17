@@ -2,6 +2,11 @@ import { Baking } from "@/types";
 
 const bakingItems: Baking[] = [
   {
+    title: "Pigs in Mud Cake",
+    date: "July 11, 2026",
+    imageUrl: "/images/baking/pigs-in-mud-cake.jpeg",
+  },
+  {
     title: "Strawberry Shortcake",
     date: "May 28, 2026",
     imageUrl: "/images/baking/strawberry-shortcake.jpeg",
